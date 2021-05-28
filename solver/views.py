@@ -15,7 +15,7 @@ def index(request):
                     else: 
                         temp.append(int(request.POST.get('arr[' + str(i) + '][' + str(j) + ']', 0)))
                 except:
-                    return HttpResponse("<h1>Value Error: Enter only integer values</h1>")
+                    return HttpResponse("<h1>Invalid values: Enter only integer values</h1>")
             board.append(temp)
         board = solve.solution(board)
         params = {'board':board}
