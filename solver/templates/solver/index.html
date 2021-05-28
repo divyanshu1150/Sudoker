@@ -4,7 +4,7 @@
     <title>Sudoker</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Enter Sudoku!!</h1>
+    <h1 style="text-align: center;">Enter Values!!</h1>
     <form action="{% url 'index' %}" method="POST" style="text-align: center;">
         {% csrf_token %}
         {% for i in '012345678' %}
