@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoker</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Enter Sudoku!!</h1>
+    <form action="{% url 'index' %}" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        {% for i in '012345678' %}
+            {% for j in '012345678' %}
+                <input type="text" name = "arr[{{ i }}][{{ j }}]" style="width: 30px; height: 30px; margin-left: -5; margin-top: -2;">
+            {% endfor %}
+            <br>
+        {% endfor %}
+        <input type="submit" style="margin-top: 10px;">
+    </form>
+</body>
+</html>

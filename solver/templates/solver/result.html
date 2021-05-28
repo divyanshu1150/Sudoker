@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoker</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Solved Sudoku!!</h1>
+    <table style="border-collapse: collapse; margin-left: auto; margin-right: auto;">
+        {% for row in board %}
+        <tr>
+            {% for col in row %}
+            <td style="border: solid; border-width: 1px; width: 30px; height: 30px;">{{ col }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+    <h2 style="text-align: center;"><a href="/">Solve Again</a></h2>
+</body>
+</html>
